@@ -1,10 +1,20 @@
 import { Component } from '@angular/core';
 
+import { PoMenuItem } from '@po-ui/ng-components';
+
 @Component({
-  selector: 'app-root',
+  selector: 'joao-victor',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'aula002';
+
+  readonly menus: Array<PoMenuItem> = [
+    { label: 'Home', action: this.onClick.bind(this) }
+  ];
+
+  private onClick() {
+    alert('Clicked in menu item')
+  }
+
 }
