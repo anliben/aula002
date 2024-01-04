@@ -1,6 +1,4 @@
-import { ActivatedRoute } from '@angular/router';
 import { Component, Renderer2, OnInit } from '@angular/core';
-import { PoPageDynamicTableActions } from '@po-ui/ng-templates';
 
 @Component({
   selector: 'app-home',
@@ -9,19 +7,20 @@ import { PoPageDynamicTableActions } from '@po-ui/ng-templates';
 })
 export class HomeComponent {
 
-  readonly joao: PoPageDynamicTableActions = {
-    edit: '/edit/:id',
-  };
+  visible: boolean = true;
 
-  readonly fields: Array<any> = [
-    { property: 'id', key: true, visible: false },
-    { property: 'name', label: 'Name' },
-    { property: 'genre', label: 'Genre', sortable: false },
-    { property: 'city', label: 'City' }
-  ]
-
-  edits(event: any) {
-    console.log(event)
+  user: any = {
+    nome: 'joao victor',
+    idade: 34,
+    pele: 'branca',
+    conjungue: {
+      nome: null,
+      idade: null,
+      pele: null
+    }
   }
 
+  getItems(event: any){
+    console.log(event)
+  }
 }

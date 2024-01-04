@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, HostListener, inject } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { PoMenuItem } from '@po-ui/ng-components';
 
@@ -16,5 +17,4 @@ export class AppComponent {
   private onClick() {
     alert('Clicked in menu item')
   }
-
 }

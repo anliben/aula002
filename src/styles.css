@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+.po-wrapper {
+  height: 100vh !important;
+}
+
+*[status='positive'] {
+  background-color: green;
+  color: white;
+  mix-blend-mode: darken;
+}
+
+*[status='negative'] {
+  background-color: tomato;
+  color: white;
+}
+
+*[status='disabled'] {
+  background-color: gray;
+  color: white;
+  cursor: not-allowed;
+}
